@@ -1,31 +1,47 @@
-# GLOCKY PK AI - Modern AI Assistant
+import datetime
 
-class GLOCKY_PK_AI:
-    def __init__(self):
-        self.name = "GLOCKY PK AI"
-        self.version = "1.0"
-        self.status = "online"
-        
-    def greet(self):
-        header = "=" * 50
-        print(f"\n{header}")
-        print(f"🚀 Welcome to {self.name}")
-        print(f"Version: {self.version} | Status: {self.status}")
-        print(f"{header}\n")
-        
-    def get_info(self):
-        return {
-            "name": self.name,
-            "version": self.version,
-            "status": self.status
-        }
-    
-    def respond(self, user_input):
-        return f"GLOCKY PK AI: Processing '{user_input}'..."
+# Modern ASCII Banner
+BANNER = """
+  _____ _      _   _   _   __     __ 
+ |  __ (_)    | | | | | |  \ \   / / 
+ | |  | |_  _| |_| |_| |_  \ \_/ /  
+ | |  | | |/ / __| __| __|  \   /   
+ | |__| |   <| |_| |_| |_ | | | |    
+ |_____/|_|\_\\__|\__|\__| |_| |_|    
+"""
 
-# Main execution
-if __name__ == '__main__':
-    ai = GLOCKY_PK_AI()
-    ai.greet()
-    print(ai.respond("Hello GLOCKY!"))
-    print(f"\nInfo: {ai.get_info()}")
+# Greeting System
+print(BANNER)
+print("Welcome to GLOCKY PK AI v2.0!")
+
+# Display Current Date and Time
+now = datetime.datetime.utcnow()
+print(f"Current Date and Time (UTC): {now.strftime('%Y-%m-%d %H:%M:%S')}")
+
+# Features List
+features = [
+    "- Intelligent response system",
+    "- Command execution system",
+    "- Info display",
+    "- Feature display",
+    "- Modern banner design"
+]
+
+print("Features:")
+for feature in features:
+    print(feature)
+
+# Example Command Execution System (to be expanded)
+def execute_command(command: str) -> str:
+    # A simple command execution simulation
+    if command == "help":
+        return "Available commands: help, info"
+    elif command == "info":
+        return "GLOCKY PK AI v2.0 - Your intelligent assistant!"
+    else:
+        return "Unknown command!"
+
+# Command Execution Example
+command = "info"
+response = execute_command(command)
+print(response)
